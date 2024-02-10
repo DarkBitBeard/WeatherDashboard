@@ -1,42 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <title>Weather Dashboard</title>
 </head>
+
 <body class="bg-blue-100">
     <header class="bg-blue-500 h-20">
-        <p class="text-right text-3xl font-bold text-black pt-5 p-10">Weather Dashboard</p>
+        <p class="text-center lg:text-right text-3xl lg:text-3xl font-bold text-black pt-5 lg:p-10">Weather Dashboard</p>
     </header>
     <audio id="backgroundMusic" autoplay loop>
         <source src="./Assets/AUDIO/Weather Channel Music.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
-    <div class="container mx-auto px-4 py-8 flex">
-        <div class="w-1/4 mr-4">
+    <div class="container mx-auto px-4 py-8 flex flex-col lg:flex-row">
+        <div class="w-full lg:w-1/4 mb-4 lg:mr-4">
             <div class="bg-gray-700 p-4 rounded-lg mb-4">
                 <label for="cityInput" class="text-white mr-2">Enter City:</label>
                 <input type="text" id="cityInput" onkeypress="searchOnEnter(event)" class="p-2 rounded border border-gray-300 focus:border-blue-500 focus:outline-none">
-                <button class="bg-blue-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mt-2 w-full hover:scale-105" onclick="searchWeather()">Search Weather</button>
+                <button class="bg-blue-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mt-2 w-full hover:scale-105 text-sm lg:text-base">Search Weather</button>
             </div>
             <div id="searchHistory" class="bg-gray-700 rounded-lg p-4">
                 <p class="text-white font-bold mb-2">Search History</p>
                 <!-- Search history items will be added dynamically here -->
             </div>
         </div>
-        <div class="w-3/4">
-            <div id="weatherContainer" class="justify-center bg-gray-300 rounded-lg p-4 mb-4">
+        <div class="w-full lg:w-3/4">
+            <div id="weatherContainer" class="justify-center bg-gray-300 rounded-lg p-4 mb-4 text-sm lg:text-base">
                 <!-- Current weather information will be displayed here -->
             </div>
-            <div id="forecastContainer" class="gap-5 bg-blue-300 rounded-lg p-4 flex flex-row flex-wrap justify-center">
+            <div id="forecastContainer" class="gap-5 bg-blue-300 rounded-lg p-4 flex flex-row flex-wrap justify-center text-sm lg:text-base">
                 <!-- Forecast for the next 4 days will be displayed here -->
             </div>
-            <p id="errorMessage" class="bg-black text-red-600 font-bold hidden text-center">Invalid city. Please try again.</p>
-        </div>
+            <p id="errorMessage" class="bg-black text-red-600 font-bold hidden text-center lg:text-left text-sm lg:text-base">Invalid city. Please try again.</p>
         </div>
     </div>
     <script src="./Assets/JS/JavaScript.js"></script>
 </body>
+
 </html>

@@ -40,7 +40,7 @@ The Weather Dashboard is a web application that allows users to search for weath
 
 ## Live Link
 
-
+https://darkbitbeard.github.io/WeatherDashboard/
 
 ## Technologies Used
 
