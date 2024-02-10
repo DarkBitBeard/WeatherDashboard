@@ -14,6 +14,13 @@ function searchOnEnter(event) {
     }
 }
 
+// Event listener for click event (for desktop browsers)
+document.getElementById('searchButton').addEventListener('click', searchWeather);
+
+// Event listener for touch events (for mobile devices)
+document.getElementById('searchButton').addEventListener('touchstart', searchWeather);
+
+
 function displayErrorMessage() {
     document.getElementById('errorMessage').classList.remove('hidden');
 }
